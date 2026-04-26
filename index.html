@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños, Mi Amor ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Italiana&family=Raleway:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor-trail" id="cursor"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    
+    <!-- Partículas mágicas de fondo -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Pantalla de bienvenida -->
+    <div id="welcome-screen">
+        <div class="decorations" id="deco-container"></div>
+        <div class="aurora-bg"></div>
+        <div class="glass-card">
+            <div class="heart-container">
+                <div class="heart-pulse">💖</div>
+                <div class="heart-rings"></div>
+            </div>
+            <h1 class="welcome-title">Feliz Cumpleaños</h1>
+            <h2 class="welcome-name">Mi Amor</h2>
+            <div class="sparkle-divider">✦ ✧ ✦</div>
+            <p class="welcome-subtitle">He creado este pequeño regalo con mucho amor en este día especial, espero que te guste mucho c:</p>
+            <button id="start-btn" class="heart-btn">
+                <span class="btn-shimmer"></span>
+                <span class="btn-text">Abrir Mi Regalo</span>
+                <span class="btn-icon">✨</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="main-wrapper" class="hidden">
+        
+        <!-- Introducción cinematográfica -->
+        <section class="intro-section reveal">
+            <div class="intro-bg-effect"></div>
+            <div class="title-container">
+                <div class="ornament-line"></div>
+                <h2 class="grand-title">TE AMO</h2>
+                <div class="ornament-line"></div>
+            </div>
+            <p class="intro-text">Recopile algunas fotos con algunos mensajitos en cada una de estas para volver a recordar todos los momentos bonitos que hemos pasado</p>
+            <p class="intro-subtext">Al hacer click en las fotitos, iras descubriendo los mensajitos bonitos c:</p>
+            <div class="scroll-indicator">
+                <div class="mouse-scroll">
+                    <div class="mouse-scroll-wheel"></div>
+                </div>
+                <span>Desliza hacia abajo</span>
+            </div>
+        </section>
+
+        <!-- Galería de fotos interactiva -->
+        <div id="story-container" class="photo-gallery"></div>
+
+        <!-- Carta de amor -->
+        <section class="letter-section reveal">
+            <div class="letter-bg-glow"></div>
+            <div class="letter-card">
+                <div class="letter-wax-seal">
+                    <div class="wax-seal-inner">💌</div>
+                </div>
+                <h2 class="letter-title">Carta Para Ti</h2>
+                <div class="letter-divider">❦</div>
+                <div class="letter-body">
+                    <p class="letter-opening">Mi amor,</p>
+                    <p> Con todo lo antes dicho y para no agobiarte con palabrotototototas. En este día tan especial, quiero que sepas que eres la razón por la que cada mañana tiene sentido. Tu sonrisa ilumina incluso los días más grises, y tu amor me ha enseñado que la felicidad verdadera existe.</p>
+                    <p>Cada momento a tu lado es un regalo que atesoro en lo más profundo de mi corazón.</p>
+                    <p>Agradezco al universo por haberte puesto en mi camino y por permitirme compartir la vida contigo. Eres mi mejor amiga, mi compañera de aventuras, mi cómplice perfecta.</p>
+                    <p class="letter-highlight">Hoy celebro tu vida, tu luz, tu existencia. Gracias por ser quien eres y por amarme como lo haces.</p>
+                    <p class="letter-closing">Nuevamente: ¡Feliz cumpleaños, mi reina! Que este nuevo año de vida esté lleno de sueños cumplidos, risas infinitas y todo el amor que mereces.</p>
+                </div>
+                <div class="signature-container">
+                    <p class="signature">
+                        Con todo mi amor,
+                        <span class="signature-name">Daniel</span>
+                    </p>
+                    <div class="signature-hearts">
+                        <span class="heart-beat">❤️</span>
+                        <span class="heart-beat" style="animation-delay: 0.3s">💕</span>
+                        <span class="heart-beat" style="animation-delay: 0.6s">💖</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de video -->
+        <section class="video-section reveal">
+            <div class="video-bg-effect"></div>
+            <div class="section-header">
+                <div class="ornament-line short"></div>
+                <h2 class="section-title">OTRO REGALITO ESPECIAL</h2>
+                <div class="ornament-line short"></div>
+            </div>
+            <p class="video-subtitle">Preparamos esto con mucho amor para ti c:</p>
+            <div class="video-wrapper">
+                <div class="video-frame">
+                    <div class="video-glow-effect"></div>
+                    <video id="gift-video" controls controlsList="nodownload">
+                        <source src="Video/regalo.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mensaje final -->
+        <section class="final-section reveal">
+            <div class="final-stars" id="stars-container"></div>
+            <div class="final-content">
+                <h3 class="final-title">Que este año sea el más maravilloso de tu vida</h3>
+                <div class="final-hearts">
+                    <span class="floating-heart">💕</span>
+                    <span class="floating-heart">💖</span>
+                    <span class="floating-heart">💗</span>
+                    <span class="floating-heart">💝</span>
+                    <span class="floating-heart">💓</span>
+                </div>
+                <p class="final-text">Te amo hoy, mañana y siempre</p>
+            </div>
+        </section>
+
+        <div class="footer-gap"></div>
+    </div>
+
+    <!-- Modal de foto (se abre al hacer click en una foto) -->
+    <div id="photo-modal" class="modal-overlay">
+        <div class="modal-close" id="modal-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-nav modal-prev" id="modal-prev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="modal-nav modal-next" id="modal-next">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="modal-content">
+            <div class="modal-image-container">
+                <div class="modal-image-glow"></div>
+                <img id="modal-image" src="" alt="Nuestra foto">
+                <div class="modal-photo-number">
+                    <span id="current-photo">1</span> / <span>40</span>
+                </div>
+            </div>
+            <div class="modal-message">
+                <div class="modal-message-icon">💌</div>
+                <p id="modal-text">Te amo</p>
+                <div class="modal-message-hearts">
+                    <span>💕</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reproductor de música tipo Spotify -->
+    <div id="player-bar" class="player-hidden">
+        <div class="player-progress-bg">
+            <div class="player-progress-fill" id="global-progress"></div>
+        </div>
+        <div class="player-container">
+            <!-- Info de la canción -->
+            <div class="player-track-info">
+                <div class="player-album-art">
+                    <img src="portada.jpg" id="album-cover" onerror="this.src='https://via.placeholder.com/56x56/ff6b9d/ffffff?text=♪'">
+                    <div class="album-playing-indicator" id="playing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="player-track-details">
+                    <div class="track-name">Hecho con mucho amor</div>
+                    <div class="track-artist">Para Ti</div>
+                </div>
+            </div>
+
+            <!-- Controles centrales -->
+            <div class="player-controls-center">
+                <div class="player-buttons">
+                    <button class="player-btn" id="shuffle-btn" title="Aleatorio">
+                        <i class="fas fa-random"></i>
+                    </button>
+                    <button class="player-btn" id="prev-btn" title="Anterior">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="player-btn player-btn-play" id="master-play">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="player-btn" id="next-btn" title="Siguiente">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button class="player-btn" id="repeat-btn" title="Repetir">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+                <div class="player-timeline">
+                    <span class="player-time" id="current-time">0:00</span>
+                    <div class="player-progress-bar">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="progress-fill"></div>
+                            <div class="progress-bar-handle" id="progress-handle"></div>
+                        </div>
+                        <input type="range" id="seek-slider" value="0" min="0" max="100">
+                    </div>
+                    <span class="player-time" id="total-time">0:00</span>
+                </div>
+            </div>
+
+            <!-- Controles de volumen -->
+            <div class="player-volume">
+                <button class="player-btn" id="vol-icon">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <div class="volume-slider-container">
+                    <div class="volume-bar-bg">
+                        <div class="volume-bar-fill" id="vol-fill"></div>
+                    </div>
+                    <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="0.8">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bg-music" src="nuestra-cancion.mp3" loop></audio>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
